@@ -1,0 +1,42 @@
+# I INSTALLED THE GITHUB ACTIONS EXTENSION... WAS I MEANT TO???
+name: Build and Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Set up Yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Run tests
+        run: yarn test
+# IF WE WANTED TO DO IT IN NPM INSTEAD OF USING YARN, we would skip the 'Set up Yarn' step, and just do the following.
+# - name: Install dependencies
+#   run: npm install
+
+# - name: Build
+#   run: npm build
+
+# - name: Run tests
+#   run: npm test
