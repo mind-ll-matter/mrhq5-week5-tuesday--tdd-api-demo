@@ -27,12 +27,20 @@
 // inside the package.json file, in scripts, write... "test": "jest"
 // // yarn test
 
-// // git init
+// CREATE LOCAL REPO
+// // git init -b main
 // // touch .gitignore
 // // git add .
-// // git remote add origin
+// // git commit -m "<ENTER COMMIT MESSAGE>"
 
-//
+// CONNECT & PUSH TO REMOTE REPO (AFTER CREATING IT ON GITHUB)
+// // git remote add origin <URL>
+// // git branch -M main
+// // git push -u origin main
+
+// CREATE A NEW FEATURE BRANCH
+// // git checkout -b feature/fix-stests
+// // git push
 
 import express from "express";
 import env from "dotenv";
