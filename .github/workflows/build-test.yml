@@ -1,5 +1,5 @@
 # I INSTALLED THE GITHUB ACTIONS EXTENSION... WAS I MEANT TO???
-name: Build and Test
+name: build
 
 on:
   push:
@@ -32,11 +32,13 @@ jobs:
       - name: Run tests
         run: yarn test
 # IF WE WANTED TO DO IT IN NPM INSTEAD OF USING YARN, we would skip the 'Set up Yarn' step, and just do the following.
+## NOTE the 'npm RUN build' and 'npm RUN test'
+
 # - name: Install dependencies
 #   run: npm install
 
 # - name: Build
-#   run: npm build
+#   run: npm run build
 
 # - name: Run tests
-#   run: npm test
+#   run: npm run test
