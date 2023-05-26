@@ -68,7 +68,7 @@ describe("getOneTask", () => {
 
   test("should return task 2", () => {
     // Arrange
-    const input = 22;
+    const input = 2;
     const expected = {
       id: 2,
       name: "Mission 02",
